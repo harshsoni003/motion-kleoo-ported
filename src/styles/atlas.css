@@ -30,8 +30,11 @@
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
   overflow-x: hidden;
-  /* iframe-safe: no 100vh; floor at 900 so embeds get full layout */
-  min-height: 900px;
+}
+
+/* Match Atlas dark theme on the document so the bg never shows through */
+html:has(.atlas-root), body:has(.atlas-root) {
+  background: #090A0F;
 }
 
 .atlas-root *,
@@ -44,7 +47,7 @@
 .atlas-root button { font-family: inherit; cursor: pointer; border: none; background: none; color: inherit; padding: 0; }
 
 .atlas-root .bg-field {
-  position: absolute;
+  position: fixed;
   inset: 0;
   z-index: 0;
   pointer-events: none;
@@ -54,7 +57,7 @@
     linear-gradient(180deg, hsl(var(--bg-glow), 22%, 12%) 0%, var(--bg) 46%, var(--bg) 100%);
 }
 .atlas-root .bg-noise {
-  position: absolute;
+  position: fixed;
   inset: 0;
   z-index: 1;
   pointer-events: none;

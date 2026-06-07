@@ -1,7 +1,7 @@
-import { Fragment, useState } from "react";
+import { Fragment, useState, type ReactElement } from "react";
 
 /* mini data-viz "grams" — one per feature card */
-const GRAPHS: JSX.Element[] = [
+const GRAPHS: ReactElement[] = [
   (<svg viewBox="0 0 72 34" fill="none"><path d="M2 30 16 22 30 25 44 12 58 16 70 4" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"/><path d="M2 30 16 22 30 25 44 12 58 16 70 4V34H2Z" fill="currentColor" opacity=".12"/><circle cx="70" cy="4" r="2.4" fill="currentColor"/></svg>),
   (<svg viewBox="0 0 72 34" fill="none"><rect x="3" y="20" width="10" height="12" rx="2" fill="currentColor" opacity=".35"/><rect x="19" y="14" width="10" height="18" rx="2" fill="currentColor" opacity=".55"/><rect x="35" y="8" width="10" height="24" rx="2" fill="currentColor" opacity=".75"/><rect x="51" y="3" width="10" height="29" rx="2" fill="currentColor"/></svg>),
   (<svg viewBox="0 0 72 34" fill="none" stroke="currentColor"><path d="M10 24 34 8M34 8 60 18M10 24 60 18M34 8 30 30" strokeWidth="1.4" opacity=".5"/><circle cx="10" cy="24" r="3.2" fill="currentColor" stroke="none"/><circle cx="34" cy="8" r="3.8" fill="currentColor" stroke="none"/><circle cx="60" cy="18" r="3.2" fill="currentColor" stroke="none"/><circle cx="30" cy="30" r="2.6" fill="currentColor" stroke="none"/></svg>),
